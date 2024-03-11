@@ -1,0 +1,20 @@
+[user]
+	name = Nico
+	email = ns@nicosalm.dev
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[pull]
+	rebase = false
+[pager]
+	branch = true
+	log = true
+[core]
+	excludesfile = /Users/nicosalm/.gitignore
+[init]
+    defaultBranch = main
+
+[alias]
+    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all -n 15
