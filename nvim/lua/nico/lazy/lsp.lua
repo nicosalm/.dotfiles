@@ -1,16 +1,3 @@
-local function attach(opts)
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-end
-
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -42,12 +29,12 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "tsserver",
-                "pylsp",
             },
             handlers = {
-                function (server_name) -- default handler (optional)
+                function(server_name) -- default handler (optional)
+
                     require("lspconfig")[server_name].setup {
-                        capabilities = capabilities,
+                        capabilities = capabilities
                     }
                 end,
 
@@ -58,7 +45,7 @@ return {
                         settings = {
                             Lua = {
                                 diagnostics = {
-                                    globals = { "vim" }
+                                    globals = { "vim", "it", "describe", "before_each", "after_each" },
                                 }
                             }
                         }
@@ -72,7 +59,7 @@ return {
         cmp.setup({
             snippet = {
                 expand = function(args)
-                    require('luasnip').lsp_expand(args.body)
+                    require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                 end,
             },
             mapping = cmp.mapping.preset.insert({
@@ -83,15 +70,16 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
+                { name = 'luasnip' }, -- For luasnip users.
+            }, {
                 { name = 'buffer' },
-                { name = 'luasnip' },
-            }),
+            })
         })
 
         vim.diagnostic.config({
-            update_in_insert = false,
+            -- update_in_insert = true,
             float = {
-                focusable = true,
+                focusable = false,
                 style = "minimal",
                 border = "rounded",
                 source = "always",
