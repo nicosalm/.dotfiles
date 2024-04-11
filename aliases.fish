@@ -4,11 +4,14 @@ alias ef 'nvim ~/.config/fish/config.fish'
 alias eg 'nvim ~/.gitconfig'
 alias ev 'nvim ~/.config/nvim/'
 alias et 'nvim ~/.tmux.conf'
+alias lc 'cd ~/dev/.leetcode && nvim ~/dev/.leetcode'
 
 alias vim-norc 'vim -u NORC'
 alias vim-none 'vim -u NONE'
 alias nvim-norc 'nvim -u NORC'
 alias nvim-none 'nvim -u NONE'
+alias nvim-uw 'nvim scp://salm@best-linux.cs.wisc.edu///home/salm/private/'
+alias nvim-320 'nvim scp://34.28.205.117///home/nicosalm/s24/projects-and-labs/mp4'
 
 function timestamp
     python -c 'import time; print(int(time.time()))'
