@@ -1,6 +1,6 @@
 [user]
 	name = Nico
-	email = ns@nicosalm.dev
+	email = nico@nicosalm.io
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
