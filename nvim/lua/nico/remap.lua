@@ -11,10 +11,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Copilot remaps
-vim.keymap.set("n", "<leader>c", "<cmd>Copilot enable<CR>")
-vim.keymap.set("n", "<leader>C", "<cmd>Copilot disable<CR>")
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -45,8 +41,3 @@ vim.keymap.set("n", "<leader><leader>", function()
         print("Error executing command: " .. errmsg)
     end
 end)
-
-vim.keymap.set("n", "<up>", "<nop>")
-vim.keymap.set("n", "<down>", "<nop>")
-vim.keymap.set("n", "<left>", "<nop>")
-vim.keymap.set("n", "<right>", "<nop>")
