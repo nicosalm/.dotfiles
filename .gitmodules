@@ -1,0 +1,3 @@
+[submodule ".config/ezsh/fzf"]
+	path = .config/ezsh/fzf
+	url = https://github.com/junegunn/fzf
