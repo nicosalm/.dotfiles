@@ -1,3 +1,9 @@
 [submodule ".config/ezsh/fzf"]
 	path = .config/ezsh/fzf
 	url = https://github.com/junegunn/fzf
+[submodule ".config/ezsh/marker"]
+	path = .config/ezsh/marker
+	url = https://github.com/pindexis/marker
+[submodule ".config/ezsh/oh-my-zsh"]
+	path = .config/ezsh/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh
