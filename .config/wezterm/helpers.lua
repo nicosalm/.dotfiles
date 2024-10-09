@@ -20,11 +20,14 @@ end
 function module.apply_to_config(config)
     private_helper()
 
+    config.window_decorations = 'RESIZE'
+
     config.color_scheme = 'Catppuccin Mocha'
     config.font = wezterm.font 'FiraCode Nerd Font'
     config.font_size = 17.0
     config.initial_rows = 40
     config.initial_cols = 100
+    config.hide_tab_bar_if_only_one_tab = true
 end
 
 -- return our module table

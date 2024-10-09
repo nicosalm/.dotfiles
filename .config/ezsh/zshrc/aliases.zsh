@@ -8,6 +8,7 @@ alias et='nvim ~/.tmux.conf'
 alias lc='cd ~/dev/.leetcode && nvim .'
 alias golings='cd ~/go/pkg/mod/github.com/mauricioabreu/golings@v0.8.0/exercises'
 alias rmc='cd /Users/nicosalm/OneDrive\ -\ rogers-machinery.com/Shared\ Documents\ -\ Rogers\ Analytics/Dashboard\ Development'
+alias python='python3'
 
 # --- lazy 
 alias j='jobs'
@@ -19,5 +20,5 @@ alias c='clear'
 alias ff='fastfetch'
 
 alias r='radian'
-alias datawipe='setopt nonomatch; rm -rf /Users/nicosalm/tmp/{*,.*} 2>/dev/null; unsetopt nonomatch'
+alias wipetmp='setopt nonomatch; rm -rf /Users/nicosalm/tmp/{*,.*} 2>/dev/null; unsetopt nonomatch'
 
