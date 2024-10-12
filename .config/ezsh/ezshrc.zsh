@@ -2,6 +2,9 @@ export TERM="xterm-256color"
 
 export ZSH=$HOME/.config/ezsh/oh-my-zsh
 
+# `bat` replaces default man
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 ZSH_THEME=nico
 
 plugins=(
