@@ -5,7 +5,7 @@ export ZSH=$HOME/.config/ezsh/oh-my-zsh
 # `bat` replaces default man
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-ZSH_THEME=nico
+ZSH_THEME=robbyrussell
 
 plugins=(
     zsh-completions

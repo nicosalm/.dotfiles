@@ -12,10 +12,11 @@ alias python='python3'
 
 # --- lazy 
 alias j='jobs'
+alias change-commits="!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" \$@; }; f"
 alias ut='uptime'
 alias so='source'
-alias vim='nvim'
-alias v='vim'
+alias nvim="$HOME/dev/nvim-macos-arm64/bin/nvim"
+alias v='nvim'
 alias c='clear'
 alias ff='fastfetch'
 
