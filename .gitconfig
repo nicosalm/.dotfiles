@@ -1,6 +1,7 @@
 [user]
-	name = Nico
+	name = Nico Salm
 	email = nico@salm.dev
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFssooa+Yw+HXBHct3Z6P64C8qPSiTZgYrruiS4DwSSN
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -18,3 +19,7 @@
 
 [alias]
     lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all -n 15
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
